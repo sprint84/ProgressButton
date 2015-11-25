@@ -10,6 +10,7 @@
 		45BEA9D01C0522B0006EEDCD /* RFProgressButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45BEA9D71C0522B0006EEDCD /* RFProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */; };
 		45BEA9DC1C0522B1006EEDCD /* RFProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */; };
+		45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9E61C052406006EEDCD /* RFProgressButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		45BEA9D61C0522B0006EEDCD /* RFProgressButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFProgressButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFProgressButtonTests.swift; sourceTree = "<group>"; };
 		45BEA9DD1C0522B1006EEDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45BEA9E61C052406006EEDCD /* RFProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFProgressButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */,
 				45BEA9D11C0522B0006EEDCD /* Info.plist */,
+				45BEA9E61C052406006EEDCD /* RFProgressButton.swift */,
 			);
 			path = RFProgressButton;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		45BEA9E11C0522B1006EEDCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.RFProgressButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		45BEA9E21C0522B1006EEDCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +383,7 @@
 				45BEA9E21C0522B1006EEDCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45BEA9E31C0522B1006EEDCD /* Build configuration list for PBXNativeTarget "RFProgressButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +392,7 @@
 				45BEA9E51C0522B1006EEDCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,7 @@
+# OS X
+.DS_Store
+
 # Xcode
-#
 build/
 *.pbxuser
 !default.pbxuser
@@ -11,6 +13,7 @@ build/
 !default.perspectivev3
 xcuserdata
 *.xccheckout
+profile
 *.moved-aside
 DerivedData
 *.hmap
@@ -26,8 +29,5 @@ DerivedData
 # Pods/
 
 # Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
 
-Carthage/Build
+Carthage
