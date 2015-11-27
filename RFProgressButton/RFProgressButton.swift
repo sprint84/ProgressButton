@@ -14,44 +14,45 @@ public class RFProgressButton: UIButton {
     @IBInspectable public var buttonColor = UIColor.whiteColor()
     @IBInspectable public var symbolColor = UIColor.blackColor()
     private var circleLayer: CAShapeLayer! = nil
-    private var animationDuration = 1.0
-    private var currentProgress = 0.3
+    private var currentProgress = 0.0
+    private var viewCenter: CGPoint {
+        return CGPoint(x:bounds.width/2, y: bounds.height/2)
+    }
+    private var radius: CGFloat {
+        return max(bounds.width, bounds.height) - 2.0
+    }
+    private let arcWidth: CGFloat = 2
+    private let startAngle: Double = 2 * M_PI / 3.0
+    private let endAngle: Double = M_PI / 3
     
+    public var animationDuration = 1.0
+    
+    
+    // MARK: - View life-cycle
     public init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
         self.addTarget(self, action: "open:", forControlEvents: .TouchUpInside)
         createProgressArcLayer()
-        
+        createShadow()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addTarget(self, action: "open:", forControlEvents: .TouchUpInside)
+        createProgressArcLayer()
+        createShadow()
+    }
+    
+    public convenience init(size: CGSize) {
+        self.init(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
     }
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
-    public func addInView(superview: UIView) {
-//        let button = UIButton(type: .Custom)
-//        button.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        superview.addSubview(self)
-        
-        let views = ["addButton": self, "bar": superview]
-        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:[addButton]-(-10)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
-        let centerX = NSLayoutConstraint(item: self, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
-        let width = NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
-        let height = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
-        superview.addConstraints(constraintsV)
-        superview.addConstraint(centerX)
-        addConstraint(width)
-        addConstraint(height)
-    }
     
     public override func drawRect(rect: CGRect) {
-        // Circle background
-        let path = UIBezierPath(ovalInRect: rect)
-        buttonColor.setFill()
-        path.fill()
-        
+        drawCircleBackgroud(rect)
         drawPlusSymbol()
         drawProgressTrackArc()
     }
@@ -61,7 +62,50 @@ public class RFProgressButton: UIButton {
         setProgress(0.8, animated: true)
     }
     
+    // MARK: - Public interface
+    public func addInView(superview: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        superview.addSubview(self)
+        
+        // Create constraints
+        let views = ["addButton": self, "bar": superview]
+        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:[addButton]-(-6)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+        let centerX = NSLayoutConstraint(item: self, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
+        let width = NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
+        let height = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
+        superview.addConstraints(constraintsV)
+        superview.addConstraint(centerX)
+        addConstraint(width)
+        addConstraint(height)
+    }
+    
+    public func setProgress(progress: Double, animated: Bool) {
+        // We want to animate the strokeEnd property of the circleLayer
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        animation.duration = animated ? animationDuration : 0.0
+        animation.fromValue = currentProgress
+        animation.toValue = progress
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
+        // right value when the animation ends.
+        circleLayer.strokeEnd = CGFloat(progress)
+        
+        // Do the actual animation
+        circleLayer.addAnimation(animation, forKey: "animateProgress")
+        
+        // Save the new progress state
+        currentProgress = progress
+    }
+    
     // MARK: - Private methods
+    private func drawCircleBackgroud(rect: CGRect) {
+        let path = UIBezierPath(ovalInRect: rect)
+        buttonColor.setFill()
+        path.fill()
+    }
+    
     private func drawPlusSymbol() {
         //set up the width and height variables
         //for the horizontal stroke
@@ -96,13 +140,7 @@ public class RFProgressButton: UIButton {
     }
     
     private func drawProgressTrackArc() {
-        let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
-        let radius: CGFloat = max(bounds.width, bounds.height) - 2.0
-        let arcWidth: CGFloat = 2
-        let startAngle: Double = 12314814815.0 * M_PI / 16666666667.0
-        let endAngle: Double = 4351851852.0 * M_PI / 16666666667.0
-    
-        let path = UIBezierPath(arcCenter: center,
+        let path = UIBezierPath(arcCenter: viewCenter,
             radius: radius/2 - arcWidth/2,
             startAngle: CGFloat(startAngle),
             endAngle: CGFloat(endAngle),
@@ -114,13 +152,7 @@ public class RFProgressButton: UIButton {
     }
     
     private func createProgressArcLayer() {
-        let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
-        let radius: CGFloat = max(bounds.width, bounds.height) - 2.0
-        let arcWidth: CGFloat = 2
-        let startAngle: Double = 12314814815.0 * M_PI / 16666666667.0
-        let endAngle: Double = 4351851852.0 * M_PI / 16666666667.0
-        
-        let circlePath = UIBezierPath(arcCenter: center,
+        let circlePath = UIBezierPath(arcCenter: viewCenter,
             radius: radius/2 - arcWidth/2,
             startAngle: CGFloat(startAngle),
             endAngle: CGFloat(endAngle),
@@ -137,24 +169,11 @@ public class RFProgressButton: UIButton {
         layer.addSublayer(circleLayer)
     }
     
-    private func setProgress(progress: Double, animated: Bool) {
-        // We want to animate the strokeEnd property of the circleLayer
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-
-        animation.duration = animated ? animationDuration : 0.0
-        animation.fromValue = currentProgress
-        animation.toValue = progress
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        
-        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
-        // right value when the animation ends.
-        circleLayer.strokeEnd = CGFloat(progress)
-        
-        // Do the actual animation
-        circleLayer.addAnimation(animation, forKey: "animateProgress")
-        
-        // Save the new progress state
-        currentProgress = progress
+    private func createShadow() {
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSizeZero
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowRadius = 2
     }
     
 }
