@@ -8,6 +8,8 @@
 
 import UIKit
 
+public typealias actionClosure = ()->()
+
 public class RFProgressButton: UIButton {
     // Private Interface
     private var currentBackgroundColor = UIColor.whiteColor()
@@ -27,6 +29,7 @@ public class RFProgressButton: UIButton {
     private var endAngle: Double {
         return initialAngle - arcOffset
     }
+    private var action: actionClosure? = nil
     
     // Public Interface
     public override var highlighted: Bool {
@@ -77,14 +80,14 @@ public class RFProgressButton: UIButton {
     // MARK: - View life-cycle
     public init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        self.addTarget(self, action: "open:", forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: "activate:", forControlEvents: .TouchUpInside)
         createProgressArcLayer()
         createShadow()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addTarget(self, action: "open:", forControlEvents: .TouchUpInside)
+        self.addTarget(self, action: "activate:", forControlEvents: .TouchUpInside)
         createProgressArcLayer()
         createShadow()
     }
@@ -103,9 +106,8 @@ public class RFProgressButton: UIButton {
         drawProgressTrackArc()
     }
     
-    func open(sender: UIButton) {
-        print("button")
-        setProgress(currentProgress + 0.2, animated: true)
+    func activate(sender: UIButton) {
+        self.action?()
     }
     
     // MARK: - Public interface
@@ -132,6 +134,10 @@ public class RFProgressButton: UIButton {
         
         // Save the new progress state
         currentProgress = clampedProgress
+    }
+    
+    public func setAction(closure: actionClosure) {
+        self.action = closure
     }
     
     // MARK: - Private methods

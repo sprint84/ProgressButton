@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         
         let addButton = RFProgressButton()
         addButton.addInView(toolbar)
+        addButton.setAction {
+            print("executing custom action")
+        }
     }
 
 }
