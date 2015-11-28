@@ -25,12 +25,6 @@ public class RFProgressButton: UIButton {
     private let endAngle: Double = M_PI / 3
     
     // Public Interface
-    public var buttonColor = UIColor.whiteColor() {
-        didSet {
-            currentBackgroundColor = buttonColor
-        }
-    }
-    public var symbolColor = UIColor.blackColor()
     public override var highlighted: Bool {
         get {
             return super.highlighted
@@ -45,9 +39,16 @@ public class RFProgressButton: UIButton {
             self.setNeedsDisplay()
         }
     }
-    
+    public var buttonColor = UIColor.whiteColor() {
+        didSet {
+            currentBackgroundColor = buttonColor
+        }
+    }
+    public var normalProgressColor = UIColor.greenColor()
+    public var alertProgressColor = UIColor.redColor()
+    public var alertProgressThreshold = 0.85
+    public var symbolColor = UIColor.blackColor()
     public var animationDuration = 1.0
-    
     
     // MARK: - View life-cycle
     public init() {
@@ -80,7 +81,7 @@ public class RFProgressButton: UIButton {
     
     func open(sender: UIButton) {
         print("button")
-        setProgress(0.8, animated: true)
+        setProgress(currentProgress + 0.2, animated: true)
     }
     
     // MARK: - Public interface
@@ -90,7 +91,7 @@ public class RFProgressButton: UIButton {
         
         // Create constraints
         let views = ["addButton": self, "bar": superview]
-        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:[addButton]-(0)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:[addButton]-(-6)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         let centerX = NSLayoutConstraint(item: self, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
         let width = NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
         let height = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
@@ -101,23 +102,12 @@ public class RFProgressButton: UIButton {
     }
     
     public func setProgress(progress: Double, animated: Bool) {
-        // We want to animate the strokeEnd property of the circleLayer
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        
-        animation.duration = animated ? animationDuration : 0.0
-        animation.fromValue = currentProgress
-        animation.toValue = progress
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        
-        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
-        // right value when the animation ends.
-        circleLayer.strokeEnd = CGFloat(progress)
-        
-        // Do the actual animation
-        circleLayer.addAnimation(animation, forKey: "animateProgress")
+        let clampedProgress = min(1.0, max(0.0, progress))
+        animateStrokePath(clampedProgress, animated: animated)
+        animateStrokeColor(clampedProgress, animated: animated)
         
         // Save the new progress state
-        currentProgress = progress
+        currentProgress = clampedProgress
     }
     
     // MARK: - Private methods
@@ -182,7 +172,7 @@ public class RFProgressButton: UIButton {
         circleLayer = CAShapeLayer()
         circleLayer.path = circlePath.CGPath
         circleLayer.fillColor = UIColor.clearColor().CGColor
-        circleLayer.strokeColor = UIColor.greenColor().CGColor
+        circleLayer.strokeColor = calculateProgressColor(0.0).CGColor
         circleLayer.lineWidth = 2.0;
         
         circleLayer.strokeEnd = CGFloat(currentProgress)
@@ -195,5 +185,50 @@ public class RFProgressButton: UIButton {
         self.layer.shadowOffset = CGSizeZero
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 2
+    }
+    
+    private func calculateProgressColor(progress: Double) -> UIColor {
+        switch progress {
+        case 0.0..<0.5:
+            return normalProgressColor
+        case 0.5...1.0:
+            return alertProgressColor
+        default:
+            return normalProgressColor
+        }
+    }
+    
+    private func animateStrokePath(progress: Double, animated: Bool) {
+        // We want to animate the strokeEnd property of the circleLayer
+        let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        
+        strokeAnimation.duration = animated ? animationDuration : 0.0
+        strokeAnimation.fromValue = currentProgress
+        strokeAnimation.toValue = progress
+        strokeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
+        // right value when the animation ends.
+        circleLayer.strokeEnd = CGFloat(progress)
+        
+        // Do the actual animation
+        circleLayer.addAnimation(strokeAnimation, forKey: "animateProgress")
+    }
+    
+    private func animateStrokeColor(progress: Double, animated: Bool) {
+        // We want to animate the strokeEnd property of the circleLayer
+        let colorAnimation = CABasicAnimation(keyPath: "strokeColor")
+        
+        colorAnimation.duration = animated ? animationDuration : 0.0
+        colorAnimation.fromValue = calculateProgressColor(currentProgress).CGColor
+        colorAnimation.toValue = calculateProgressColor(progress).CGColor
+        colorAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        // Set the circleLayer's strokeEnd property to 1.0 now so that it's the
+        // right value when the animation ends.
+        circleLayer.strokeColor = calculateProgressColor(progress).CGColor
+        
+        // Do the actual animation
+        circleLayer.addAnimation(colorAnimation, forKey: "animateColor")
     }
 }
