@@ -18,11 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let addButton = RFProgressButton()
-        addButton.addInView(toolbar)
         addButton.setAction { [unowned self] in
-            self.progress += 0.4
+            self.progress += 0.1
             addButton.setProgress(self.progress, animated: true)
         }
+        addButton.warningProgressColor = UIColor.redColor()
+        addButton.warningProgressThreshold = 0.9
+        addButton.addInView(toolbar)
     }
 
 }

@@ -12,8 +12,8 @@ public typealias actionClosure = ()->()
 
 public class RFProgressButton: UIButton {
     // Private Interface
-    private var currentBackgroundColor = UIColor.whiteColor()
-    private var savedBackgroundColor = UIColor.whiteColor()
+    private var currentBackgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1)
+    private var savedBackgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1)
     private var circleLayer: CAShapeLayer! = nil
     private var currentProgress = 0.0
     private var viewCenter: CGPoint {
@@ -48,7 +48,7 @@ public class RFProgressButton: UIButton {
     }
     
     /// Color used in the background of the button.
-    public var buttonColor = UIColor.whiteColor() {
+    public var buttonColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1) {
         didSet {
             currentBackgroundColor = buttonColor
         }
