@@ -21,8 +21,12 @@ public class RFProgressButton: UIButton {
         return max(bounds.width, bounds.height) - 2.0
     }
     private let arcWidth: CGFloat = 2
-    private let startAngle: Double = 2 * M_PI / 3.0
-    private let endAngle: Double = M_PI / 3
+    private var startAngle: Double {
+        return initialAngle + arcOffset
+    }
+    private var endAngle: Double {
+        return initialAngle - arcOffset
+    }
     
     // Public Interface
     public override var highlighted: Bool {
@@ -44,6 +48,8 @@ public class RFProgressButton: UIButton {
             currentBackgroundColor = buttonColor
         }
     }
+    
+    /// Progress stroke color for the first level before the `advisoryThreshold`
     public var normalProgressColor = UIColor.greenColor()
     public var advisoryProgressColor = UIColor.orangeColor()
     public var warningProgressColor = UIColor.redColor()
@@ -51,6 +57,22 @@ public class RFProgressButton: UIButton {
     public var warningProgressThreshold = 0.85
     public var symbolColor = UIColor.blackColor()
     public var animationDuration = 1.0
+    
+    /// Starting point, in radian angles, where the progress arc will begin. Default: π/2
+    public var initialAngle: Double = M_PI_2 {
+        didSet {
+            self.circleLayer.removeFromSuperlayer()
+            createProgressArcLayer()
+        }
+    }
+    
+    /// Arc offset, in radian angles, from `initialAngle` where the progress arc will start drawing. Default: π/6
+    public var arcOffset: Double = M_PI / 6.0 {
+        didSet {
+            self.circleLayer.removeFromSuperlayer()
+            createProgressArcLayer()
+        }
+    }
     
     // MARK: - View life-cycle
     public init() {
@@ -155,8 +177,8 @@ public class RFProgressButton: UIButton {
     private func drawProgressTrackArc() {
         let path = UIBezierPath(arcCenter: viewCenter,
             radius: radius/2 - arcWidth/2,
-            startAngle: CGFloat(startAngle),
-            endAngle: CGFloat(endAngle),
+            startAngle: CGFloat(startAngle + 0.0001),
+            endAngle: CGFloat(endAngle - 0.0001),
             clockwise: true)
         
         path.lineWidth = arcWidth
@@ -167,8 +189,8 @@ public class RFProgressButton: UIButton {
     private func createProgressArcLayer() {
         let circlePath = UIBezierPath(arcCenter: viewCenter,
             radius: radius/2 - arcWidth/2,
-            startAngle: CGFloat(startAngle),
-            endAngle: CGFloat(endAngle),
+            startAngle: CGFloat(startAngle + 0.0001),
+            endAngle: CGFloat(endAngle - 0.0001),
             clockwise: true)
         
         circleLayer = CAShapeLayer()
