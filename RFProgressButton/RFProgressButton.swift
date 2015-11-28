@@ -45,8 +45,10 @@ public class RFProgressButton: UIButton {
         }
     }
     public var normalProgressColor = UIColor.greenColor()
-    public var alertProgressColor = UIColor.redColor()
-    public var alertProgressThreshold = 0.85
+    public var advisoryProgressColor = UIColor.orangeColor()
+    public var warningProgressColor = UIColor.redColor()
+    public var advisoryProgressThreshold = 0.6
+    public var warningProgressThreshold = 0.85
     public var symbolColor = UIColor.blackColor()
     public var animationDuration = 1.0
     
@@ -189,10 +191,12 @@ public class RFProgressButton: UIButton {
     
     private func calculateProgressColor(progress: Double) -> UIColor {
         switch progress {
-        case 0.0..<0.5:
+        case 0.0..<advisoryProgressThreshold:
             return normalProgressColor
-        case 0.5...1.0:
-            return alertProgressColor
+        case advisoryProgressThreshold..<warningProgressThreshold:
+            return advisoryProgressColor
+        case warningProgressThreshold...1.0:
+            return warningProgressColor
         default:
             return normalProgressColor
         }
