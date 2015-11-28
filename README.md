@@ -1,7 +1,7 @@
-# RFProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# RFProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/badge/Release-v1.0-brightgreen.svg)]()
 
 
-## Usage
+## Check it out
 
 To run the example project, clone the repo, and open the 'Example/Example.xcodeproj' file.
 
@@ -28,42 +28,59 @@ For further details, please visit the [Carthage Github page](https://github.com/
 
 ##Usage
 
-Using RFCalculatorKeyboard is quite simple. First you need to import the Framework
+RFProgressButton is intended to be used in conjunction with UIToolbar or UITabBar. By default, when instantiated this component will try to center itself within its parent view. Although possible, setting the frame of this button manually is not recommended. Using the button in a UIToolbar is quite simple. First you need to import the module:
 
 ```swift
-import RFCalculatorKeyboard
+import RFProgressButton
 ```
 
-Then instantiate the view and apply it to a text input (`UITextField` or `UITextView`).
+Then instantiate the view and add it to a `UIToolbar` or `UITabBar`.
 
 ```swift
-let calcInputView = RFCalculatorKeyboard(frame: frame)
-calcInputView.delegate = self
-textField.inputView = calcInputView
+let addButton = RFProgressButton()
+addButton.addInView(toolbar)
 ```
 
-RFCalculatorKeyboard uses a delegate to report back the values. That way, you have the flexibility to format the text the way you want before displaying to the user.
+You can normally add actions to `RFProgressButton` using `addTarget:action:forControlEvents` since it is a subclass of UIButton. However, we added a simpler closure method if you want to keep code inline.
 
 ```swift
-func calculator(calculator: RFCalculatorKeyboard, didChangeValue value: String) {
-	valueTextField.text = value
+addButton.setAction {
+    print("Action performed")
 }
 ```
 
-### Customization
-RFCalculatorKeyboard supports some layout customizations.
+RFProgressButton displays a progress bar around it's frame. Setting the current progress works as expected:
 
 ```swift
-// Show/Hide decimal button in keyboard. When hidden, the decimal input begin from the least
-// significative cent. Eg. 0.00 -> 0.02 -> 0.25 -> 2.50
-showDecimal: Bool 
+addButton.setProgress(self.progress, animated: true)
+```
 
-numbersBackgroundColor: UIColor
-numbersTextColor: UIColor
-operationsBackgroundColor: UIColor
-operationsTextColor: UIColor
-equalBackgroundColor: UIColor
-equalTextColor: UIColor
+### Customization
+RFProgressButton supports some layout customizations, and we are working to improve customizable parameters in the future. For example, RFProgressButton supports 3 color levels, that can be triggered by a threshold value.
+
+```swift
+public var normalProgressColor: UIColor
+public var advisoryProgressColor: UIColor
+public var warningProgressColor: UIColor 
+```
+
+Users can define when those colors will be triggered, in a range 0..1. If you set values above 1.0 for these threshold values, the progress bar will always display the `normalProgressColor`:
+
+```swift
+public var advisoryProgressThreshold: Double
+public var warningProgressThreshold: Double
+```
+
+You can also change the position where the progress arc starts. The default value for the initial angle is 90° or π/2. That means the arc will begin drawing from the bottom of the circunference.
+
+And you can change an offset angle that will be calculated from the initial angle in both directions (clockwise and counter-clockwise), creating an empty section on the initial angle position. These values must be set in Radians.
+
+```swift
+/// Starting point, in radian angles, where the progress arc will begin. Default: π/2
+public var initialAngle: Double
+
+/// Arc offset, in radian angles, from `initialAngle` where the progress arc will start drawing. Default: π/6
+public var arcOffset: Double
 ```
 
 ## Author
@@ -72,4 +89,4 @@ Reefactor, Inc., reefactor@gmail.com
 
 ## License
 
-RFCalculatorKeyboard is available under the MIT license. See the LICENSE file for more info.
+RFProgressButton is available under the MIT license. See the LICENSE file for more info.
