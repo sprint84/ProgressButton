@@ -46,19 +46,33 @@ public class RFProgressButton: UIButton {
             self.setNeedsDisplay()
         }
     }
+    
+    /// Color used in the background of the button.
     public var buttonColor = UIColor.whiteColor() {
         didSet {
             currentBackgroundColor = buttonColor
         }
     }
     
-    /// Progress stroke color for the first level before the `advisoryThreshold`
-    public var normalProgressColor = UIColor.greenColor()
-    public var advisoryProgressColor = UIColor.orangeColor()
-    public var warningProgressColor = UIColor.redColor()
+    /// Progress stroke color for the first level before the `advisoryProgressThreshold`
+    public var normalProgressColor = UIColor(red:0, green:0.95, blue:0.09, alpha:1)
+    
+    /// Progress stroke color for the second level between `normal` and `warningProgressThreshold`
+    public var advisoryProgressColor = UIColor(red:1, green:0.5, blue:0, alpha:1)
+    
+    /// Progress stroke color for the third level after `advisoryProgressThreshold`
+    public var warningProgressColor = UIColor(red:0.96, green:0.13, blue:0, alpha:1)
+    
+    /// Threshold value for the second level. The value in this property must be in the range 0.0 to 1.0. The default value of this property is 0.6.
     public var advisoryProgressThreshold = 0.6
+    
+    /// Threshold value for the third level. The value in this property must be in the range 0.0 to 1.0. The default value of this property is 0.85.
     public var warningProgressThreshold = 0.85
+    
+    /// Color used to paint the center symbol. Default: black
     public var symbolColor = UIColor.blackColor()
+    
+    /// Standard animation duration when updating the progress value. The default value of this property is 1.0.
     public var animationDuration = 1.0
     
     /// Starting point, in radian angles, where the progress arc will begin. Default: π/2

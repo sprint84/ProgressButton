@@ -12,14 +12,16 @@ import RFProgressButton
 class ViewController: UIViewController {
 
     @IBOutlet weak var toolbar: UIToolbar!
+    var progress = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let addButton = RFProgressButton()
         addButton.addInView(toolbar)
-        addButton.setAction {
-            print("executing custom action")
+        addButton.setAction { [unowned self] in
+            self.progress += 0.4
+            addButton.setProgress(self.progress, animated: true)
         }
     }
 
