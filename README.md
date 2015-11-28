@@ -28,7 +28,7 @@ For further details, please visit the [Carthage Github page](https://github.com/
 
 ##Usage
 
-RFProgressButton is intended to be used in conjunction with UIToolbar or UITabBar. By default, when instantiated this component will try to center itself within its parent view. Although possible, setting the frame of this button manually is not recommended. Using the button in a UIToolbar is quite simple. First you need to import the module:
+RFProgressButton is intended to be used in conjunction with `UIToolbar` or `UITabBar`. By default, when instantiated this component will try to center itself within its parent view. Although possible, setting the frame of this button manually is not recommended. Using the button in a `UIToolbar` is quite simple. First you need to import the module:
 
 ```swift
 import RFProgressButton
@@ -41,7 +41,7 @@ let addButton = RFProgressButton()
 addButton.addInView(toolbar)
 ```
 
-You can normally add actions to `RFProgressButton` using `addTarget:action:forControlEvents` since it is a subclass of UIButton. However, we added a simpler closure method if you want to keep code inline.
+You can normally add actions to `RFProgressButton` using `addTarget:action:forControlEvents` since it is a subclass of `UIButton`. However, we added a simpler closure method if you want to keep code inline.
 
 ```swift
 addButton.setAction {
@@ -49,14 +49,14 @@ addButton.setAction {
 }
 ```
 
-RFProgressButton displays a progress bar around it's frame. Setting the current progress works as expected:
+`RFProgressButton` displays a progress bar around it's frame. Setting the current progress works as expected:
 
 ```swift
 addButton.setProgress(self.progress, animated: true)
 ```
 
 ### Customization
-RFProgressButton supports some layout customizations, and we are working to improve customizable parameters in the future. For example, RFProgressButton supports 3 color levels, that can be triggered by a threshold value.
+`RFProgressButton` supports some layout customizations, and we are working to improve customizable parameters in the future. For example, `RFProgressButton` supports 3 color levels, that can be triggered by a threshold value.
 
 ```swift
 public var normalProgressColor: UIColor
@@ -82,7 +82,7 @@ public var initialAngle: Double
 /// Arc offset, in radian angles, from `initialAngle` where the progress arc will start drawing. Default: π/6
 public var arcOffset: Double
 ```
-
+![Angle description](./angle_description.png?raw=true)
 ## Author
 
 Reefactor, Inc., reefactor@gmail.com
