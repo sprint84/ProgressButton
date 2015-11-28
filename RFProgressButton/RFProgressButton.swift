@@ -97,6 +97,7 @@ public class RFProgressButton: UIButton {
         self.addTarget(self, action: "activate:", forControlEvents: .TouchUpInside)
         createProgressArcLayer()
         createShadow()
+        tag = 45045
     }
     
     override init(frame: CGRect) {
@@ -104,6 +105,7 @@ public class RFProgressButton: UIButton {
         self.addTarget(self, action: "activate:", forControlEvents: .TouchUpInside)
         createProgressArcLayer()
         createShadow()
+        tag = 45045
     }
     
     public convenience init(size: CGSize) {
@@ -112,6 +114,7 @@ public class RFProgressButton: UIButton {
 
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        tag = 45045
     }
     
     public override func drawRect(rect: CGRect) {

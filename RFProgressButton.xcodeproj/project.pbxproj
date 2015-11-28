@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452689791C0A57460001BA78 /* TouchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452689781C0A57460001BA78 /* TouchExtensions.swift */; };
 		45BEA9D01C0522B0006EEDCD /* RFProgressButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45BEA9D71C0522B0006EEDCD /* RFProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */; };
 		45BEA9DC1C0522B1006EEDCD /* RFProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452689781C0A57460001BA78 /* TouchExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchExtensions.swift; sourceTree = "<group>"; };
 		45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RFProgressButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFProgressButton.h; sourceTree = "<group>"; };
 		45BEA9D11C0522B0006EEDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */,
 				45BEA9D11C0522B0006EEDCD /* Info.plist */,
 				45BEA9E61C052406006EEDCD /* RFProgressButton.swift */,
+				452689781C0A57460001BA78 /* TouchExtensions.swift */,
 				45F3D8F51C092D040010702D /* UIColor+Brightness.swift */,
 			);
 			path = RFProgressButton;
@@ -202,6 +205,7 @@
 			files = (
 				45F3D8F61C092D040010702D /* UIColor+Brightness.swift in Sources */,
 				45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */,
+				452689791C0A57460001BA78 /* TouchExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
