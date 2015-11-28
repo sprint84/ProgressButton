@@ -8,11 +8,10 @@
 
 import UIKit
 
-@IBDesignable
 public class RFProgressButton: UIButton {
-    
-    @IBInspectable public var buttonColor = UIColor.whiteColor()
-    @IBInspectable public var symbolColor = UIColor.blackColor()
+    // Private Interface
+    private var currentBackgroundColor = UIColor.whiteColor()
+    private var savedBackgroundColor = UIColor.whiteColor()
     private var circleLayer: CAShapeLayer! = nil
     private var currentProgress = 0.0
     private var viewCenter: CGPoint {
@@ -24,6 +23,28 @@ public class RFProgressButton: UIButton {
     private let arcWidth: CGFloat = 2
     private let startAngle: Double = 2 * M_PI / 3.0
     private let endAngle: Double = M_PI / 3
+    
+    // Public Interface
+    public var buttonColor = UIColor.whiteColor() {
+        didSet {
+            currentBackgroundColor = buttonColor
+        }
+    }
+    public var symbolColor = UIColor.blackColor()
+    public override var highlighted: Bool {
+        get {
+            return super.highlighted
+        }
+        set {
+            if newValue {
+                currentBackgroundColor = buttonColor.colorWithBrightnessFactor(0.8)
+            } else {
+                currentBackgroundColor = buttonColor
+            }
+            super.highlighted = newValue
+            self.setNeedsDisplay()
+        }
+    }
     
     public var animationDuration = 1.0
     
@@ -69,7 +90,7 @@ public class RFProgressButton: UIButton {
         
         // Create constraints
         let views = ["addButton": self, "bar": superview]
-        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:[addButton]-(-6)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
+        let constraintsV = NSLayoutConstraint.constraintsWithVisualFormat("V:[addButton]-(0)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views)
         let centerX = NSLayoutConstraint(item: self, attribute: .CenterX, relatedBy: .Equal, toItem: superview, attribute: .CenterX, multiplier: 1.0, constant: 0.0)
         let width = NSLayoutConstraint(item: self, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
         let height = NSLayoutConstraint(item: self, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 60.0)
@@ -102,7 +123,7 @@ public class RFProgressButton: UIButton {
     // MARK: - Private methods
     private func drawCircleBackgroud(rect: CGRect) {
         let path = UIBezierPath(ovalInRect: rect)
-        buttonColor.setFill()
+        currentBackgroundColor.setFill()
         path.fill()
     }
     
@@ -175,5 +196,4 @@ public class RFProgressButton: UIButton {
         self.layer.shadowOpacity = 0.3
         self.layer.shadowRadius = 2
     }
-    
 }

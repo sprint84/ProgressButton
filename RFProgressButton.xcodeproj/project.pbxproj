@@ -11,6 +11,7 @@
 		45BEA9D71C0522B0006EEDCD /* RFProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */; };
 		45BEA9DC1C0522B1006EEDCD /* RFProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */; };
 		45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9E61C052406006EEDCD /* RFProgressButton.swift */; };
+		45F3D8F61C092D040010702D /* UIColor+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3D8F51C092D040010702D /* UIColor+Brightness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFProgressButtonTests.swift; sourceTree = "<group>"; };
 		45BEA9DD1C0522B1006EEDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45BEA9E61C052406006EEDCD /* RFProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFProgressButton.swift; sourceTree = "<group>"; };
+		45F3D8F51C092D040010702D /* UIColor+Brightness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Brightness.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */,
 				45BEA9D11C0522B0006EEDCD /* Info.plist */,
 				45BEA9E61C052406006EEDCD /* RFProgressButton.swift */,
+				45F3D8F51C092D040010702D /* UIColor+Brightness.swift */,
 			);
 			path = RFProgressButton;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F3D8F61C092D040010702D /* UIColor+Brightness.swift in Sources */,
 				45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
