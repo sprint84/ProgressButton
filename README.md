@@ -1,5 +1,6 @@
 # RFProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/badge/Release-v1.0-brightgreen.svg)]()
 
+![Gif video](./progress_button.gif)
 
 ## Check it out
 
