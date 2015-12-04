@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RFProgressButton
+import ProgressButton
 
 class ViewController: UIViewController {
 
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let addButton = RFProgressButton()
+        let addButton = ProgressButton()
         addButton.setAction { [unowned self] in
             self.progress += 0.1
             addButton.setProgress(self.progress, animated: true)

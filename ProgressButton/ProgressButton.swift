@@ -1,6 +1,6 @@
 //
-//  RFProgressButton.swift
-//  RFProgressButton
+//  ProgressButton.swift
+//  ProgressButton
 //
 //  Created by Guilherme Moura on 11/24/15.
 //  Copyright © 2015 Reefactor, Inc. All rights reserved.
@@ -10,7 +10,7 @@ import UIKit
 
 public typealias actionClosure = ()->()
 
-public class RFProgressButton: UIButton {
+public class ProgressButton: UIButton {
     // Private Interface
     private var currentBackgroundColor: UIColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1)
     private var savedBackgroundColor: UIColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1)

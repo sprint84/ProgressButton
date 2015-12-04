@@ -12,31 +12,31 @@
 		45BEA9FA1C05339C006EEDCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45BEA9F81C05339C006EEDCD /* Main.storyboard */; };
 		45BEA9FC1C05339C006EEDCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BEA9FB1C05339C006EEDCD /* Assets.xcassets */; };
 		45BEA9FF1C05339C006EEDCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45BEA9FD1C05339C006EEDCD /* LaunchScreen.storyboard */; };
-		45BEAA111C053427006EEDCD /* RFProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BEAA0D1C0533F8006EEDCD /* RFProgressButton.framework */; };
-		45BEAA121C053427006EEDCD /* RFProgressButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45BEAA0D1C0533F8006EEDCD /* RFProgressButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45C524B61C12189600510CF7 /* ProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C524B31C12187C00510CF7 /* ProgressButton.framework */; };
+		45C524B71C12189600510CF7 /* ProgressButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45C524B31C12187C00510CF7 /* ProgressButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		45BEAA0C1C0533F8006EEDCD /* PBXContainerItemProxy */ = {
+		45C524B21C12187C00510CF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45BEAA071C0533F8006EEDCD /* RFProgressButton.xcodeproj */;
+			containerPortal = 45C524AD1C12187C00510CF7 /* ProgressButton.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 45BEA9CC1C0522B0006EEDCD;
-			remoteInfo = RFProgressButton;
+			remoteGlobalIDString = 45C5248C1C1217BE00510CF7;
+			remoteInfo = ProgressButton;
 		};
-		45BEAA0E1C0533F8006EEDCD /* PBXContainerItemProxy */ = {
+		45C524B41C12187C00510CF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45BEAA071C0533F8006EEDCD /* RFProgressButton.xcodeproj */;
+			containerPortal = 45C524AD1C12187C00510CF7 /* ProgressButton.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 45BEA9D61C0522B0006EEDCD;
-			remoteInfo = RFProgressButtonTests;
+			remoteGlobalIDString = 45C524961C1217BE00510CF7;
+			remoteInfo = ProgressButtonTests;
 		};
-		45BEAA131C053427006EEDCD /* PBXContainerItemProxy */ = {
+		45C524B81C12189600510CF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45BEAA071C0533F8006EEDCD /* RFProgressButton.xcodeproj */;
+			containerPortal = 45C524AD1C12187C00510CF7 /* ProgressButton.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 45BEA9CB1C0522AF006EEDCD;
-			remoteInfo = RFProgressButton;
+			remoteGlobalIDString = 45C5248B1C1217BE00510CF7;
+			remoteInfo = ProgressButton;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				45BEAA121C053427006EEDCD /* RFProgressButton.framework in Embed Frameworks */,
+				45C524B71C12189600510CF7 /* ProgressButton.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +62,7 @@
 		45BEA9FB1C05339C006EEDCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45BEA9FE1C05339C006EEDCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45BEAA001C05339C006EEDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45BEAA071C0533F8006EEDCD /* RFProgressButton.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RFProgressButton.xcodeproj; path = ../RFProgressButton.xcodeproj; sourceTree = "<group>"; };
+		45C524AD1C12187C00510CF7 /* ProgressButton.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProgressButton.xcodeproj; path = ../ProgressButton.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BEAA111C053427006EEDCD /* RFProgressButton.framework in Frameworks */,
+				45C524B61C12189600510CF7 /* ProgressButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		45BEA9E81C05339C006EEDCD = {
 			isa = PBXGroup;
 			children = (
-				45BEAA071C0533F8006EEDCD /* RFProgressButton.xcodeproj */,
+				45C524AD1C12187C00510CF7 /* ProgressButton.xcodeproj */,
 				45BEA9F31C05339C006EEDCD /* Example */,
 				45BEA9F21C05339C006EEDCD /* Products */,
 			);
@@ -107,11 +107,11 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		45BEAA081C0533F8006EEDCD /* Products */ = {
+		45C524AE1C12187C00510CF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45BEAA0D1C0533F8006EEDCD /* RFProgressButton.framework */,
-				45BEAA0F1C0533F8006EEDCD /* RFProgressButtonTests.xctest */,
+				45C524B31C12187C00510CF7 /* ProgressButton.framework */,
+				45C524B51C12187C00510CF7 /* ProgressButtonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				45BEAA141C053427006EEDCD /* PBXTargetDependency */,
+				45C524B91C12189600510CF7 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -167,8 +167,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 45BEAA081C0533F8006EEDCD /* Products */;
-					ProjectRef = 45BEAA071C0533F8006EEDCD /* RFProgressButton.xcodeproj */;
+					ProductGroup = 45C524AE1C12187C00510CF7 /* Products */;
+					ProjectRef = 45C524AD1C12187C00510CF7 /* ProgressButton.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -179,18 +179,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		45BEAA0D1C0533F8006EEDCD /* RFProgressButton.framework */ = {
+		45C524B31C12187C00510CF7 /* ProgressButton.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RFProgressButton.framework;
-			remoteRef = 45BEAA0C1C0533F8006EEDCD /* PBXContainerItemProxy */;
+			path = ProgressButton.framework;
+			remoteRef = 45C524B21C12187C00510CF7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		45BEAA0F1C0533F8006EEDCD /* RFProgressButtonTests.xctest */ = {
+		45C524B51C12187C00510CF7 /* ProgressButtonTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = RFProgressButtonTests.xctest;
-			remoteRef = 45BEAA0E1C0533F8006EEDCD /* PBXContainerItemProxy */;
+			path = ProgressButtonTests.xctest;
+			remoteRef = 45C524B41C12187C00510CF7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -221,10 +221,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45BEAA141C053427006EEDCD /* PBXTargetDependency */ = {
+		45C524B91C12189600510CF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RFProgressButton;
-			targetProxy = 45BEAA131C053427006EEDCD /* PBXContainerItemProxy */;
+			name = ProgressButton;
+			targetProxy = 45C524B81C12189600510CF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

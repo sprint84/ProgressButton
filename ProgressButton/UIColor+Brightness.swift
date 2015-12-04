@@ -1,6 +1,6 @@
 //
 //  UIColor+Brightness.swift
-//  RFProgressButton
+//  ProgressButton
 //
 //  Created by Guilherme Moura on 11/27/15.
 //  Copyright © 2015 Reefactor, Inc. All rights reserved.

@@ -7,189 +7,189 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		452689791C0A57460001BA78 /* TouchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452689781C0A57460001BA78 /* TouchExtensions.swift */; };
-		45BEA9D01C0522B0006EEDCD /* RFProgressButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45BEA9D71C0522B0006EEDCD /* RFProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */; };
-		45BEA9DC1C0522B1006EEDCD /* RFProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */; };
-		45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEA9E61C052406006EEDCD /* RFProgressButton.swift */; };
-		45F3D8F61C092D040010702D /* UIColor+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F3D8F51C092D040010702D /* UIColor+Brightness.swift */; };
+		45C524901C1217BE00510CF7 /* ProgressButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 45C5248F1C1217BE00510CF7 /* ProgressButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45C524971C1217BE00510CF7 /* ProgressButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C5248C1C1217BE00510CF7 /* ProgressButton.framework */; };
+		45C5249C1C1217BE00510CF7 /* ProgressButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C5249B1C1217BE00510CF7 /* ProgressButtonTests.swift */; };
+		45C524A91C1217FF00510CF7 /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C524A61C1217FF00510CF7 /* ProgressButton.swift */; };
+		45C524AA1C1217FF00510CF7 /* TouchExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C524A71C1217FF00510CF7 /* TouchExtensions.swift */; };
+		45C524AB1C1217FF00510CF7 /* UIColor+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C524A81C1217FF00510CF7 /* UIColor+Brightness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		45BEA9D81C0522B0006EEDCD /* PBXContainerItemProxy */ = {
+		45C524981C1217BE00510CF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 45BEA9C31C0522AF006EEDCD /* Project object */;
+			containerPortal = 45C524831C1217BE00510CF7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 45BEA9CB1C0522AF006EEDCD;
-			remoteInfo = RFProgressButton;
+			remoteGlobalIDString = 45C5248B1C1217BE00510CF7;
+			remoteInfo = ProgressButton;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		452689781C0A57460001BA78 /* TouchExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchExtensions.swift; sourceTree = "<group>"; };
-		45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RFProgressButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RFProgressButton.h; sourceTree = "<group>"; };
-		45BEA9D11C0522B0006EEDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45BEA9D61C0522B0006EEDCD /* RFProgressButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RFProgressButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFProgressButtonTests.swift; sourceTree = "<group>"; };
-		45BEA9DD1C0522B1006EEDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45BEA9E61C052406006EEDCD /* RFProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFProgressButton.swift; sourceTree = "<group>"; };
-		45F3D8F51C092D040010702D /* UIColor+Brightness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Brightness.swift"; sourceTree = "<group>"; };
+		45C5248C1C1217BE00510CF7 /* ProgressButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C5248F1C1217BE00510CF7 /* ProgressButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressButton.h; sourceTree = "<group>"; };
+		45C524911C1217BE00510CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C524961C1217BE00510CF7 /* ProgressButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgressButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C5249B1C1217BE00510CF7 /* ProgressButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButtonTests.swift; sourceTree = "<group>"; };
+		45C5249D1C1217BE00510CF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C524A61C1217FF00510CF7 /* ProgressButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressButton.swift; sourceTree = "<group>"; };
+		45C524A71C1217FF00510CF7 /* TouchExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchExtensions.swift; sourceTree = "<group>"; };
+		45C524A81C1217FF00510CF7 /* UIColor+Brightness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Brightness.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45BEA9C81C0522AF006EEDCD /* Frameworks */ = {
+		45C524881C1217BE00510CF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45BEA9D31C0522B0006EEDCD /* Frameworks */ = {
+		45C524931C1217BE00510CF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BEA9D71C0522B0006EEDCD /* RFProgressButton.framework in Frameworks */,
+				45C524971C1217BE00510CF7 /* ProgressButton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45BEA9C21C0522AF006EEDCD = {
+		45C524821C1217BE00510CF7 = {
 			isa = PBXGroup;
 			children = (
-				45BEA9CE1C0522B0006EEDCD /* RFProgressButton */,
-				45BEA9DA1C0522B0006EEDCD /* RFProgressButtonTests */,
-				45BEA9CD1C0522B0006EEDCD /* Products */,
+				45C5248E1C1217BE00510CF7 /* ProgressButton */,
+				45C5249A1C1217BE00510CF7 /* ProgressButtonTests */,
+				45C5248D1C1217BE00510CF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		45BEA9CD1C0522B0006EEDCD /* Products */ = {
+		45C5248D1C1217BE00510CF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */,
-				45BEA9D61C0522B0006EEDCD /* RFProgressButtonTests.xctest */,
+				45C5248C1C1217BE00510CF7 /* ProgressButton.framework */,
+				45C524961C1217BE00510CF7 /* ProgressButtonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		45BEA9CE1C0522B0006EEDCD /* RFProgressButton */ = {
+		45C5248E1C1217BE00510CF7 /* ProgressButton */ = {
 			isa = PBXGroup;
 			children = (
-				45BEA9CF1C0522B0006EEDCD /* RFProgressButton.h */,
-				45BEA9D11C0522B0006EEDCD /* Info.plist */,
-				45BEA9E61C052406006EEDCD /* RFProgressButton.swift */,
-				452689781C0A57460001BA78 /* TouchExtensions.swift */,
-				45F3D8F51C092D040010702D /* UIColor+Brightness.swift */,
+				45C524911C1217BE00510CF7 /* Info.plist */,
+				45C5248F1C1217BE00510CF7 /* ProgressButton.h */,
+				45C524A61C1217FF00510CF7 /* ProgressButton.swift */,
+				45C524A71C1217FF00510CF7 /* TouchExtensions.swift */,
+				45C524A81C1217FF00510CF7 /* UIColor+Brightness.swift */,
 			);
-			path = RFProgressButton;
+			path = ProgressButton;
 			sourceTree = "<group>";
 		};
-		45BEA9DA1C0522B0006EEDCD /* RFProgressButtonTests */ = {
+		45C5249A1C1217BE00510CF7 /* ProgressButtonTests */ = {
 			isa = PBXGroup;
 			children = (
-				45BEA9DB1C0522B1006EEDCD /* RFProgressButtonTests.swift */,
-				45BEA9DD1C0522B1006EEDCD /* Info.plist */,
+				45C5249B1C1217BE00510CF7 /* ProgressButtonTests.swift */,
+				45C5249D1C1217BE00510CF7 /* Info.plist */,
 			);
-			path = RFProgressButtonTests;
+			path = ProgressButtonTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		45BEA9C91C0522AF006EEDCD /* Headers */ = {
+		45C524891C1217BE00510CF7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BEA9D01C0522B0006EEDCD /* RFProgressButton.h in Headers */,
+				45C524901C1217BE00510CF7 /* ProgressButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		45BEA9CB1C0522AF006EEDCD /* RFProgressButton */ = {
+		45C5248B1C1217BE00510CF7 /* ProgressButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45BEA9E01C0522B1006EEDCD /* Build configuration list for PBXNativeTarget "RFProgressButton" */;
+			buildConfigurationList = 45C524A01C1217BE00510CF7 /* Build configuration list for PBXNativeTarget "ProgressButton" */;
 			buildPhases = (
-				45BEA9C71C0522AF006EEDCD /* Sources */,
-				45BEA9C81C0522AF006EEDCD /* Frameworks */,
-				45BEA9C91C0522AF006EEDCD /* Headers */,
-				45BEA9CA1C0522AF006EEDCD /* Resources */,
+				45C524871C1217BE00510CF7 /* Sources */,
+				45C524881C1217BE00510CF7 /* Frameworks */,
+				45C524891C1217BE00510CF7 /* Headers */,
+				45C5248A1C1217BE00510CF7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RFProgressButton;
-			productName = RFProgressButton;
-			productReference = 45BEA9CC1C0522B0006EEDCD /* RFProgressButton.framework */;
+			name = ProgressButton;
+			productName = ProgressButton;
+			productReference = 45C5248C1C1217BE00510CF7 /* ProgressButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		45BEA9D51C0522B0006EEDCD /* RFProgressButtonTests */ = {
+		45C524951C1217BE00510CF7 /* ProgressButtonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45BEA9E31C0522B1006EEDCD /* Build configuration list for PBXNativeTarget "RFProgressButtonTests" */;
+			buildConfigurationList = 45C524A31C1217BE00510CF7 /* Build configuration list for PBXNativeTarget "ProgressButtonTests" */;
 			buildPhases = (
-				45BEA9D21C0522B0006EEDCD /* Sources */,
-				45BEA9D31C0522B0006EEDCD /* Frameworks */,
-				45BEA9D41C0522B0006EEDCD /* Resources */,
+				45C524921C1217BE00510CF7 /* Sources */,
+				45C524931C1217BE00510CF7 /* Frameworks */,
+				45C524941C1217BE00510CF7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				45BEA9D91C0522B0006EEDCD /* PBXTargetDependency */,
+				45C524991C1217BE00510CF7 /* PBXTargetDependency */,
 			);
-			name = RFProgressButtonTests;
-			productName = RFProgressButtonTests;
-			productReference = 45BEA9D61C0522B0006EEDCD /* RFProgressButtonTests.xctest */;
+			name = ProgressButtonTests;
+			productName = ProgressButtonTests;
+			productReference = 45C524961C1217BE00510CF7 /* ProgressButtonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		45BEA9C31C0522AF006EEDCD /* Project object */ = {
+		45C524831C1217BE00510CF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Reefactor, Inc.";
 				TargetAttributes = {
-					45BEA9CB1C0522AF006EEDCD = {
+					45C5248B1C1217BE00510CF7 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
-					45BEA9D51C0522B0006EEDCD = {
+					45C524951C1217BE00510CF7 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
 			};
-			buildConfigurationList = 45BEA9C61C0522AF006EEDCD /* Build configuration list for PBXProject "RFProgressButton" */;
+			buildConfigurationList = 45C524861C1217BE00510CF7 /* Build configuration list for PBXProject "ProgressButton" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 45BEA9C21C0522AF006EEDCD;
-			productRefGroup = 45BEA9CD1C0522B0006EEDCD /* Products */;
+			mainGroup = 45C524821C1217BE00510CF7;
+			productRefGroup = 45C5248D1C1217BE00510CF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45BEA9CB1C0522AF006EEDCD /* RFProgressButton */,
-				45BEA9D51C0522B0006EEDCD /* RFProgressButtonTests */,
+				45C5248B1C1217BE00510CF7 /* ProgressButton */,
+				45C524951C1217BE00510CF7 /* ProgressButtonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		45BEA9CA1C0522AF006EEDCD /* Resources */ = {
+		45C5248A1C1217BE00510CF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45BEA9D41C0522B0006EEDCD /* Resources */ = {
+		45C524941C1217BE00510CF7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -199,36 +199,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		45BEA9C71C0522AF006EEDCD /* Sources */ = {
+		45C524871C1217BE00510CF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F3D8F61C092D040010702D /* UIColor+Brightness.swift in Sources */,
-				45BEA9E71C052406006EEDCD /* RFProgressButton.swift in Sources */,
-				452689791C0A57460001BA78 /* TouchExtensions.swift in Sources */,
+				45C524AB1C1217FF00510CF7 /* UIColor+Brightness.swift in Sources */,
+				45C524A91C1217FF00510CF7 /* ProgressButton.swift in Sources */,
+				45C524AA1C1217FF00510CF7 /* TouchExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45BEA9D21C0522B0006EEDCD /* Sources */ = {
+		45C524921C1217BE00510CF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BEA9DC1C0522B1006EEDCD /* RFProgressButtonTests.swift in Sources */,
+				45C5249C1C1217BE00510CF7 /* ProgressButtonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		45BEA9D91C0522B0006EEDCD /* PBXTargetDependency */ = {
+		45C524991C1217BE00510CF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 45BEA9CB1C0522AF006EEDCD /* RFProgressButton */;
-			targetProxy = 45BEA9D81C0522B0006EEDCD /* PBXContainerItemProxy */;
+			target = 45C5248B1C1217BE00510CF7 /* ProgressButton */;
+			targetProxy = 45C524981C1217BE00510CF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		45BEA9DE1C0522B1006EEDCD /* Debug */ = {
+		45C5249E1C1217BE00510CF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -276,7 +276,7 @@
 			};
 			name = Debug;
 		};
-		45BEA9DF1C0522B1006EEDCD /* Release */ = {
+		45C5249F1C1217BE00510CF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -317,7 +317,7 @@
 			};
 			name = Release;
 		};
-		45BEA9E11C0522B1006EEDCD /* Debug */ = {
+		45C524A11C1217BE00510CF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -325,17 +325,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RFProgressButton/Info.plist;
+				INFOPLIST_FILE = ProgressButton/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.RFProgressButton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.ProgressButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		45BEA9E21C0522B1006EEDCD /* Release */ = {
+		45C524A21C1217BE00510CF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -343,31 +343,31 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RFProgressButton/Info.plist;
+				INFOPLIST_FILE = ProgressButton/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.RFProgressButton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.ProgressButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		45BEA9E41C0522B1006EEDCD /* Debug */ = {
+		45C524A41C1217BE00510CF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = RFProgressButtonTests/Info.plist;
+				INFOPLIST_FILE = ProgressButtonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.RFProgressButtonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.ProgressButtonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		45BEA9E51C0522B1006EEDCD /* Release */ = {
+		45C524A51C1217BE00510CF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = RFProgressButtonTests/Info.plist;
+				INFOPLIST_FILE = ProgressButtonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.RFProgressButtonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reefactor.ProgressButtonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -375,34 +375,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		45BEA9C61C0522AF006EEDCD /* Build configuration list for PBXProject "RFProgressButton" */ = {
+		45C524861C1217BE00510CF7 /* Build configuration list for PBXProject "ProgressButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45BEA9DE1C0522B1006EEDCD /* Debug */,
-				45BEA9DF1C0522B1006EEDCD /* Release */,
+				45C5249E1C1217BE00510CF7 /* Debug */,
+				45C5249F1C1217BE00510CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45BEA9E01C0522B1006EEDCD /* Build configuration list for PBXNativeTarget "RFProgressButton" */ = {
+		45C524A01C1217BE00510CF7 /* Build configuration list for PBXNativeTarget "ProgressButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45BEA9E11C0522B1006EEDCD /* Debug */,
-				45BEA9E21C0522B1006EEDCD /* Release */,
+				45C524A11C1217BE00510CF7 /* Debug */,
+				45C524A21C1217BE00510CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45BEA9E31C0522B1006EEDCD /* Build configuration list for PBXNativeTarget "RFProgressButtonTests" */ = {
+		45C524A31C1217BE00510CF7 /* Build configuration list for PBXNativeTarget "ProgressButtonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45BEA9E41C0522B1006EEDCD /* Debug */,
-				45BEA9E51C0522B1006EEDCD /* Release */,
+				45C524A41C1217BE00510CF7 /* Debug */,
+				45C524A51C1217BE00510CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 45BEA9C31C0522AF006EEDCD /* Project object */;
+	rootObject = 45C524831C1217BE00510CF7 /* Project object */;
 }

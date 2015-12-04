@@ -1,6 +1,6 @@
 //
 //  TouchExtensions.swift
-//  RFProgressButton
+//  ProgressButton
 //
 //  Created by Guilherme Moura on 11/28/15.
 //  Copyright © 2015 Reefactor, Inc. All rights reserved.
@@ -13,7 +13,7 @@ extension UIToolbar {
         let views = self.subviews
         var button: UIView? = nil
         for view in views {
-            if view.isKindOfClass(RFProgressButton) {
+            if view.isKindOfClass(ProgressButton) {
                 button = view
             }
         }
@@ -29,7 +29,7 @@ extension UITabBar {
         let views = self.subviews
         var button: UIView? = nil
         for view in views {
-            if view.isKindOfClass(RFProgressButton) {
+            if view.isKindOfClass(ProgressButton) {
                 button = view
             }
         }

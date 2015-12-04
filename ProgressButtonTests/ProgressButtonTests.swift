@@ -1,15 +1,15 @@
 //
-//  RFProgressButtonTests.swift
-//  RFProgressButtonTests
+//  ProgressButtonTests.swift
+//  ProgressButtonTests
 //
-//  Created by Guilherme Moura on 11/24/15.
+//  Created by Guilherme Moura on 12/4/15.
 //  Copyright © 2015 Reefactor, Inc. All rights reserved.
 //
 
 import XCTest
-@testable import RFProgressButton
+@testable import ProgressButton
 
-class RFProgressButtonTests: XCTestCase {
+class ProgressButtonTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
