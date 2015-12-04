@@ -1,4 +1,4 @@
-# RFProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/badge/Release-v1.0-brightgreen.svg)]()
+# ProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/badge/Release-v1.0-brightgreen.svg)]()
 
 ![Gif video](./progress_button.gif)
 
@@ -12,11 +12,11 @@ This component is written using Swift and Dynamic Frameworks, so iOS 8.x is requ
 
 ## Installation
 
-RFProgressButton is available through [Carthage](https://github.com/Carthage/Carthage). To install
+ProgressButton is available through [Carthage](https://github.com/Carthage/Carthage). To install
 it, simply add the following line to your Cartfile:
 
 ```ruby
-github "sprint84/RFProgressButton" ~> 1.0
+github "sprint84/ProgressButton" ~> 1.0
 ```
 
 ###Installing Carthage
@@ -29,20 +29,20 @@ For further details, please visit the [Carthage Github page](https://github.com/
 
 ##Usage
 
-RFProgressButton is intended to be used in conjunction with `UIToolbar` or `UITabBar`. By default, when instantiated this component will try to center itself within its parent view. Although possible, setting the frame of this button manually is not recommended. Using the button in a `UIToolbar` is quite simple. First you need to import the module:
+ProgressButton is intended to be used in conjunction with `UIToolbar` or `UITabBar`. By default, when instantiated this component will try to center itself within its parent view. Although possible, setting the frame of this button manually is not recommended. Using the button in a `UIToolbar` is quite simple. First you need to import the module:
 
 ```swift
-import RFProgressButton
+import ProgressButton
 ```
 
 Then instantiate the view and add it to a `UIToolbar` or `UITabBar`.
 
 ```swift
-let addButton = RFProgressButton()
+let addButton = ProgressButton()
 addButton.addInView(toolbar)
 ```
 
-You can normally add actions to `RFProgressButton` using `addTarget:action:forControlEvents` since it is a subclass of `UIButton`. However, we added a simpler closure method if you want to keep code inline.
+You can normally add actions to `ProgressButton` using `addTarget:action:forControlEvents` since it is a subclass of `UIButton`. However, we added a simpler closure method if you want to keep code inline.
 
 ```swift
 addButton.setAction {
@@ -50,14 +50,14 @@ addButton.setAction {
 }
 ```
 
-`RFProgressButton` displays a progress bar around it's frame. Setting the current progress works as expected:
+`ProgressButton` displays a progress bar around it's frame. Setting the current progress works as expected:
 
 ```swift
 addButton.setProgress(self.progress, animated: true)
 ```
 
 ### Customization
-`RFProgressButton` supports some layout customizations, and we are working to improve customizable parameters in the future. For example, `RFProgressButton` supports 3 color levels, that can be triggered by a threshold value.
+`ProgressButton` supports some layout customizations, and we are working to improve customizable parameters in the future. For example, `ProgressButton` supports 3 color levels, that can be triggered by a threshold value.
 
 ```swift
 public var normalProgressColor: UIColor
@@ -90,4 +90,4 @@ Reefactor, Inc., reefactor@gmail.com
 
 ## License
 
-RFProgressButton is available under the MIT license. See the LICENSE file for more info.
+ProgressButton is available under the MIT license. See the LICENSE file for more info.
