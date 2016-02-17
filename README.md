@@ -1,4 +1,4 @@
-# ProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/badge/Release-v1.0-brightgreen.svg)]()
+# ProgressButton [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub release](https://img.shields.io/badge/Release-v1.1.1-brightgreen.svg)]()
 
 ![Gif video](./progress_button.gif)
 
@@ -16,7 +16,7 @@ ProgressButton is available through [Carthage](https://github.com/Carthage/Carth
 it, simply add the following line to your Cartfile:
 
 ```ruby
-github "sprint84/ProgressButton" ~> 1.0
+github "sprint84/ProgressButton" ~> 1.1.1
 ```
 
 ###Installing Carthage
