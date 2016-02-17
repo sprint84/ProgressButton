@@ -27,5 +27,8 @@ class ViewController: UIViewController {
         addButton.addInView(toolbar)
     }
 
+    @IBAction func testButton(sender: UIBarButtonItem) {
+        print("tapped")
+    }
 }
 

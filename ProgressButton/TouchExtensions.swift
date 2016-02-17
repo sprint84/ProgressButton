@@ -10,7 +10,7 @@ import UIKit
 
 extension UIToolbar {
     public override func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
-        let views = self.subviews
+        let views = subviews
         var button: UIView? = nil
         for view in views {
             if view.isKindOfClass(ProgressButton) {
@@ -18,9 +18,9 @@ extension UIToolbar {
             }
         }
         guard let progress = button else {
-            return CGRectContainsPoint(self.frame, point)
+            return super.pointInside(point, withEvent: event)
         }
-        return CGRectContainsPoint(self.frame, point) || CGRectContainsPoint(progress.frame, point)
+        return super.pointInside(point, withEvent: event) || CGRectContainsPoint(progress.frame, point)
     }
 }
 
@@ -34,8 +34,8 @@ extension UITabBar {
             }
         }
         guard let progress = button else {
-            return CGRectContainsPoint(self.frame, point)
+            return super.pointInside(point, withEvent: event)
         }
-        return CGRectContainsPoint(self.frame, point) || CGRectContainsPoint(progress.frame, point)
+        return super.pointInside(point, withEvent: event) || CGRectContainsPoint(progress.frame, point)
     }
 }
